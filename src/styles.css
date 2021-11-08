@@ -1,0 +1,179 @@
+/* This portfolio application is designed 
+   in a responsive manner. The default display
+   is for a mobile device.
+*/
+
+/*
+    Global Settings
+*/
+
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+a:hover {
+  color: green;
+}
+
+a:active {
+  color: gray;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+/* The app-container class serves as the
+   base container for the app. 
+*/
+.app-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* The content-container class serves as the
+   base container for the application specific
+   information and functionality. 
+
+   The content-container includes the following:
+       .main-header - This section encloses the title and navigation
+       .main-content - This section encloses the content
+       .main-footer - This section encloses the footer information
+*/
+.content-container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* START - .main-header */
+/* 
+  The .main-header class is identified as a flex item and
+  the properties are set not to grow, not to shrink, with a
+  defined height and width so that the content section can
+  expand and shrink as needed while still displaying the 
+  header at the top of the display.
+*/
+.main-header {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 9rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+.main-header-intro {
+  height: 5rem;
+  background-color: lightgrey;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.main-header .menu {
+  height: 3rem;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  display: inline-block;
+}
+
+.main-header .menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.main-header .menu li {
+  display: inline-block;
+  font-size: 0.85rem;
+  width: 20%;
+}
+
+/* START - .main-content */
+.main-content {
+  flex: 1 1 auto;
+  background-color: transparent;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+.main-content .main-content-intro {
+  text-align: center;
+  background-color: lightgrey;
+  color: black;
+  border-radius: 0.5em;
+}
+
+.main-content .main-content-intro .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+}
+
+.main-content .main-content-about {
+  background-color: lightgrey;
+  color: black;
+  border-radius: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.main-content .main-content-about span {
+  text-align: center;
+  width: 100%;
+}
+
+/* START - .main-footer */
+/* 
+  The .main-footer class is identified as a flex item and
+  the properties are set not to grow, not to shrink, with a
+  defined height and width so that the content section can
+  expand and shrink as needed while still displaying the 
+  footer at the bottom of the display.
+*/
+.main-footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
+  font-size: 0.85rem;
+  background-color: lightgrey;
+  color: black;
+  border-radius: 0.5em;
+  border: 1px solid darkgray;
+}
